@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="de.nware.custompreferences.SeekBarPreference">
+        <attr name="max_value" format="integer"></attr>
+        <attr name="min_value" format="integer"></attr>
+        <attr name="unit_sign" format="string"></attr>
+    </declare-styleable>
+</resources>
