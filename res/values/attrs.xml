@@ -3,6 +3,6 @@
     <declare-styleable name="de.nware.custompreferences.SeekBarPreference">
         <attr name="max_value" format="integer"></attr>
         <attr name="min_value" format="integer"></attr>
-        <attr name="unit_sign" format="string"></attr>
+        <attr name="unit_symbol" format="string"></attr>
     </declare-styleable>
 </resources>

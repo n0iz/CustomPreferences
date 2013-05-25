@@ -1,7 +1,6 @@
 package de.nware.custompreferences;
 
 
-import de.olei.custompref.R;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.os.Parcel;
@@ -38,7 +37,7 @@ public class SeekBarPreference extends DialogPreference implements
 	private int mMaxValue = 100;
 	private int mMinValue = 0;
 	
-	String mUnitSign;
+	String mUnitSymbol;
 
 	private int mCurrentValue;
 
@@ -48,9 +47,9 @@ public class SeekBarPreference extends DialogPreference implements
 
 		TypedArray a = context.obtainStyledAttributes(attrs,
 				R.styleable.de_nware_custompreferences_SeekBarPreference);
-		mUnitSign = a.getString(R.styleable.de_nware_custompreferences_SeekBarPreference_unit_sign);
-		if(mUnitSign == null) {
-			mUnitSign=""; //if no unit sign is selected set it to nothing
+		mUnitSymbol = a.getString(R.styleable.de_nware_custompreferences_SeekBarPreference_unit_symbol);
+		if(mUnitSymbol == null) {
+			mUnitSymbol=""; //if no unit sign is selected set it to nothing
 		}
 		mMaxValue = a.getInt(R.styleable.de_nware_custompreferences_SeekBarPreference_max_value, mMaxValue);
 		mMinValue = a.getInt(R.styleable.de_nware_custompreferences_SeekBarPreference_min_value, mMinValue);
@@ -100,7 +99,7 @@ public class SeekBarPreference extends DialogPreference implements
 		mWidgetValueText = (TextView) ((ViewGroup)view).findViewById(99999);
 		if(mWidgetValueText==null) Log.e(TAG, "text widget null");
 
-		mWidgetValueText.setText(mCurrentValue + mUnitSign);
+		mWidgetValueText.setText(mCurrentValue + mUnitSymbol);
 
 		mSeekBar = (SeekBar) view.findViewById(R.id.seekBar);
 		int max;
@@ -137,7 +136,7 @@ public class SeekBarPreference extends DialogPreference implements
 			return;
 		}
 		
-		mWidgetValueText.setText(newValue + mUnitSign);
+		mWidgetValueText.setText(newValue + mUnitSymbol);
 	}
 
 	@Override
