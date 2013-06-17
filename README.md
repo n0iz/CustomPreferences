@@ -15,16 +15,16 @@ If you are using it in your project don't hesitate to leave a message.
 ## SeekBarPreference
 Just another SeekBarPreference.
 
-The SeekBar Preference shows a SeekBar directly on the PreferenceScreen.
-Its inspired by [Robobunny's SeekBarPreference](http://robobunny.com/wp/2011/08/13/android-seekbar-preference/), but without using a own layout.
-Well there is some layout in there, but it will reuse the default Preference layout. It crates a vertical LinearLayout adds the default Preference layout and the SeekBar.
+The SeekBarPreference shows a SeekBar directly on the PreferenceScreen.
+It's inspired by [Robobunny's SeekBarPreference](http://robobunny.com/wp/2011/08/13/android-seekbar-preference/), but without using an own layout.
+Well there is some layout in there, but it will reuse the default Preference layout. It creates a vertical LinearLayout, which adds the default Preference layout and the SeekBar.
 This provides a nice integration into different Android versions, since the default layout isn't changed.
 
 ### Usage
 
-To use SeekBarPreference you have to checkout this repository and include it as library in your Android project.
+To use SeekBarPreference you have to checkout this repository and include it as a library in your Android project.
 
-To define a SeekBarPreference you have to put it, like regular Preference, in your preferences xml file.
+To define a SeekBarPreference you have to put it, like a regular Preference, in your preferences xml file.
 
 	<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
 		xmlns:custom="http://schemas.android.com/apk/res-auto">
@@ -44,11 +44,11 @@ This should produce something like that. (on Android 4.2)
 ![SeekBarPreference Screenshot](./seekbarpref.png "SeekBarPreference screenshot")
 
 For the custom attributes you need to assign a namespace, see ``xmlns:custom``.
-It must be set to ``http://.../res-auto`` if you are using it as a library otherwise you have to use the packagename (and don't forget to copy ``attrs.xml``).
+It must be set to ``http://.../res-auto`` if you are using it as a library. Otherwise you have to use the packagename (and don't forget to copy ``attrs.xml``).
 
 The available attributes are the following:
 
 *	``min_value`` is optional, could be + or -, default is 0
-*	``max_value`` is mandatory, it defines the maximum, has to be greater than ``min_value``
-*	``unit_symbol`` is optional, shows a unit symbol behind the current value
+*	``max_value`` is mandatory, it defines the maximum. It has to be greater than ``min_value``
+*	``unit_symbol`` is optional, it shows a unit symbol behind the current value
 
